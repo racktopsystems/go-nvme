@@ -1,4 +1,4 @@
-module github.com/dswarbrick/go-nvme
+module github.com/racktopsystems/go-nvme
 
 go 1.19
 

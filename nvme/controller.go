@@ -27,6 +27,7 @@ type NVMeController struct {
 	FirmwareVersion string
 	OUI             uint32 // IEEE OUI identifier
 	MaxDataXferSize uint
+	SecureProto	bool
 }
 
 // Print outputs the attributes of an NVMe controller in a pretty-print style.

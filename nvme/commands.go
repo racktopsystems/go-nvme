@@ -16,8 +16,15 @@ package nvme
 
 const (
 	// cf. NVM Express Base Specification 2.0c , section 5: Admin Command Set
-	NVME_ADMIN_GET_LOG_PAGE uint8 = 0x02
-	NVME_ADMIN_IDENTIFY     uint8 = 0x06
+	NVME_ADMIN_GET_LOG_PAGE 	uint8 = 0x02
+	NVME_ADMIN_IDENTIFY     	uint8 = 0x06
+	NVME_ADMIN_SECURITY_SEND	uint8 = 0x81
+	NVME_ADMIN_SECURITY_RECV	uint8 = 0x82
+
+	NVME_IO_RESV_REGISTER		uint8 = 0x0d
+	NVME_IO_RESV_REPORT		uint8 = 0x0e
+	NVME_IO_RESV_ACQUIRE		uint8 = 0x11
+	NVME_IO_RESV_RELEASE		uint8 = 0x15
 )
 
 // Defined in <linux/nvme_ioctl.h> (first 64 bytes refer to NVM Express Base Specification 2.0c,
@@ -42,3 +49,5 @@ type nvmePassthruCommand struct {
 	timeout_ms   uint32
 	result       uint32
 } // 72 bytes
+
+
